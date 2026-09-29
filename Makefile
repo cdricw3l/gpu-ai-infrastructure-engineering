@@ -34,11 +34,18 @@ val: $(NAME)
 clean:
 	rm -f $(SRCS_OBJS) $(VAL_LOG)
 
+cmakeclean:
+	find . -name build -type d -exec rm -rf {} \;
 
-fclean: clean
+fclean: clean cmakeclean
 	rm -f $(NAME)
-	rm -rf model
 
 re: fclean $(NAME)
 
-.PHONY: clean fclean re
+COM=cmake_tutorial
+git: fclean
+	git add .
+	git commit -m $(COM)
+	git push
+
+.PHONY: clean fclean re val run cmakeclean
