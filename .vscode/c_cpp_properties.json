@@ -1,0 +1,19 @@
+{
+    "configurations": [
+        {
+            "name": "Linux-HIP",
+            "includePath": [
+                "${workspaceFolder}/include",
+                "/opt/rocm/core-10.0/include/**"
+            ],
+            "defines": [
+                "__HIP_PLATFORM_AMD__=1"
+            ],
+            "compilerPath": "/opt/rocm/bin/hipcc",
+            "cStandard": "c11",
+            "cppStandard": "c++23",
+            "intelliSenseMode": "linux-clang-x64"
+        }
+    ],
+    "version": 4
+}
