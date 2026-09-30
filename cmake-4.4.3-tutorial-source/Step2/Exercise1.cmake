@@ -2,8 +2,16 @@ cmake_minimum_required(VERSION 3.23)
 
 
 # TODO1: Implement MacroAppend
-macro(MacroAppend ListVar Value)
 
+# La macro MacroAppend prend en argument la liste original_list et un argument à ajouter à la list
+# Dévelloper la variable ${original_list} donne le nom de la list
+# Dévelloper la variable ${${original_list}} donne le contenu de la list
+# la fonction set() prend en premier argument le nom de la variable à definir (ici la liste)
+# et en second argument la variable attibuer a la liste (ici la liste original ${{original_list}} et le nouvelle ajout ${argument})
+
+
+macro(MacroAppend original_list argument)
+  set(${original_list} ${${original_list}};${argument})
 endmacro()
 
 # TODO2: Call MacroAppend, then return the value from FuncAppend

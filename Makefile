@@ -12,8 +12,7 @@ SRCS=	main.hip \
 		tools/time.hip \
 		tools/display.hip \
 		memory/memory_clean_check.hip \
-		memory/init_arr.hip \
-		memory/init_arr_thread.hip 
+		memory/init_1D_arr.hip
 
 SRCS_OBJS=${SRCS:.hip=.o}
 

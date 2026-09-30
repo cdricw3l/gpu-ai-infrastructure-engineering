@@ -23,7 +23,7 @@ int main(int argc, char **argv)
     mode = get_mode(argc, argv);
     if (mode == ERR)
         return (ERR);
-    if (init_host_memory_thread(&arr_a, &arr_b, &arr_result) == ERR)
+    if (init_host_memory(&arr_a, &arr_b, &arr_result, MODE_THREAD) == ERR)
     {
         std::cout << "Error initialisation host memory" << std::endl;
         return (ERR);

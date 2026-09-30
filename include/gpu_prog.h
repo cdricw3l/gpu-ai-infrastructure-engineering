@@ -15,7 +15,7 @@
 
 #define BILLION  1000000000L
 #define MILLION  1000000L
-#define N 24000000
+#define N 240000000
 #define HIP_CHECK(x) (assert((x) == hipSuccess))
 
 #define OK  0
@@ -24,6 +24,8 @@
 #define MODE_GPU 3
 #define MODE_DISPLAY 0
 #define OUT_MODE_RESULT 0
+#define MODE_SEQ    0
+#define MODE_THREAD 1
 
 #define NB_THREAD 24
 
@@ -44,8 +46,7 @@ __host__ void time_mesurement_cpu(int (*f)(float *, float *, float *), float *ar
 
 /* memory */
 
-int init_host_memory(float **arr_a, float **arr_b, float **arr_result);
-int init_host_memory_thread(float **arr_a, float **arr_b, float **arr_result);
+int init_host_memory(float **arr_a, float **arr_b, float **arr_result, int mode);
 
 /* tools */
 
