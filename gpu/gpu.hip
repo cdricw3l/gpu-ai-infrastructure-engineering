@@ -1,7 +1,5 @@
 #include "../include/gpu_prog.h"
 
-
-
 __global__ void gpu_calculation(float *d_arr_a, float *d_arr_b, float *d_arr_result)
 {
    

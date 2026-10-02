@@ -11,14 +11,6 @@ int HIP_CHECK_A(hipError_t status)
     return (OK);
 };   
 
-int clean_host_memory(float *arr_a, float *arr_b, float *arr_result)
-{
-    free(arr_a);
-    free(arr_b);
-    free(arr_result);
-    return (OK);
-}
-
 int clean_device_memory(float *d_arr_a, float *d_arr_b, float *d_arr_result)
 {
     if(HIP_CHECK_A(hipFree(d_arr_a)) == ERR)

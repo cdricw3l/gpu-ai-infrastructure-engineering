@@ -36,7 +36,8 @@ clean:
 cmakeclean:
 	find . -name build -type d -exec rm -rf {} \;
 
-fclean: clean cmakeclean
+fclean: clean
+	make -i cmakeclean
 	rm -f $(NAME)
 
 re: fclean $(NAME)

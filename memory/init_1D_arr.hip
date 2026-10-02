@@ -1,5 +1,13 @@
 #include "../include/gpu_prog.h"
 
+int clean_host_memory(float *arr_a, float *arr_b, float *arr_result)
+{
+    free(arr_a);
+    free(arr_b);
+    free(arr_result);
+    return (OK);
+}
+
 void *thread_data(void *data)
 {
     t_memory_thread *memory;
@@ -14,7 +22,7 @@ void *thread_data(void *data)
     return (NULL);
 }
 
-int launch_thread(t_memory_thread memory[NB_THREAD])
+static int launch_thread(t_memory_thread memory[NB_THREAD])
 {
     int return_code;
     size_t i;

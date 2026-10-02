@@ -6,7 +6,7 @@
 #include <string.h>
 #include <assert.h>
 #include <iomanip> 
-#include <hip/hip_runtime.h>
+//#include <hip/hip_runtime.h>
 #include <time.h>
 #include <unistd.h>
 #include <stdio.h>
@@ -15,7 +15,7 @@
 
 #define BILLION  1000000000L
 #define MILLION  1000000L
-#define N 240000000
+#define N 24000000
 #define HIP_CHECK(x) (assert((x) == hipSuccess))
 
 #define OK  0
