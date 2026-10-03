@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/model/gpu_programming/produit_matriciel/build/cmake_install.cmake",
+		"/home/model/gpu_programming/produit_matriciel/build/Matrix_2d/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

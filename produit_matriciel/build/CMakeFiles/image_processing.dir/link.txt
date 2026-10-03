@@ -1,0 +1,1 @@
+/usr/bin/c++ -Werror -Wextra -Wall -g -Wl,--dependency-file=CMakeFiles/image_processing.dir/link.d CMakeFiles/image_processing.dir/main.cxx.o -o image_processing  Matrix_2d/libMatrix_2d.a

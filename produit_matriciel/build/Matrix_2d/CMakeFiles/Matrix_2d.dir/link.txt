@@ -1,0 +1,2 @@
+/usr/bin/ar qc libMatrix_2d.a CMakeFiles/Matrix_2d.dir/Matrix_2d.cxx.o
+/usr/bin/ranlib libMatrix_2d.a

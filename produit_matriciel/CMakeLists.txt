@@ -1,17 +1,21 @@
 cmake_minimum_required(VERSION 4.2.3)
 
-project(gpu_programming LANGUAGES HIP)
+project(gpu_programming)
 
 
 add_executable(image_processing)
+set (CMAKE_CXX_FLAGS "-Werror -Wextra -Wall -g")
 
-set (CMAKE_C_FLAGS "-Werror -Wextra -Wall")
+message("flags: ${CMAKE_CXX_FLAGS}")
 
-message("flags: ${CMAKE_C_FLAGS}")
+add_subdirectory(Matrix_2d)
 
 target_sources(image_processing
     PRIVATE 
-        main.hip
-    
+        main.cxx
+)
 
+target_link_libraries(image_processing
+    PRIVATE 
+        Matrix_2d
 )
